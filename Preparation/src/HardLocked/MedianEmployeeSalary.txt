@@ -1,0 +1,11 @@
+Select Employee.Id, Employee.Company, Employee.Salary
+From Employee, Employee alias
+where Employee.Company = alias.Company
+Group by Employee.Company, Employee.Salary
+Having Sum(
+    Case
+    When Employee.Salary = alias.Salary then 1
+    else 0
+    End) >= ABS(SUM(SIGN(Employee.Salary - alias.Salary)))
+    Order by Employee.Id
+;
