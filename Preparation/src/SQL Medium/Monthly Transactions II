@@ -1,0 +1,45 @@
+Table: Transactions
+
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| id             | int     |
+| country        | varchar |
+| state          | enum    |
+| amount         | int     |
+| trans_date     | date    |
++----------------+---------+
+id is the primary key of this table.
+The table has information about incoming transactions.
+The state column is an enum of type ["approved", "declined"].
+Table: Chargebacks
+
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| trans_id       | int     |
+| charge_date    | date    |
++----------------+---------+
+Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.
+trans_id is a foreign key to the id column of Transactions table.
+Each chargeback corresponds to a transaction made previously even if they were not approved.
+
+
+select month, country,
+    sum(case when type='approved' then 1 else 0 end) as approved_count,
+    sum(case when type='approved' then amount else 0 end) as approved_amount,
+    sum(case when type='chargeback' then 1 else 0 end) as chargeback_count,
+    sum(case when type='chargeback' then amount else 0 end) as chargeback_amount
+from (
+    (
+    select left(t.trans_date, 7) as month, t.country, amount,'approved' as type
+    from Transactions as t
+    where state='approved'
+    ) 
+    union all (
+    select left(c.trans_date, 7) as month, t.country, amount,'chargeback' as type
+    from Transactions as t join Chargebacks as c
+    on t.id = c.trans_id
+    )
+) as tt
+group by tt.month, tt.country
