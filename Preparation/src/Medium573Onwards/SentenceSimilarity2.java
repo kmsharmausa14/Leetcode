@@ -1,6 +1,9 @@
-package locked;
+package Medium573Onwards;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import locked.SentenceSimilarity2.DSU;
 
 public class SentenceSimilarity2 {
 

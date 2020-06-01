@@ -1,4 +1,6 @@
-package locked;
+package Medium573Onwards;
+
+import locked.ListNode;
 
 public class InsertintoaCyclicSortedList {
 
