@@ -6,39 +6,41 @@ class Solution {
 	public static void main(String[] args)
 	{
 		Solution s = new Solution();
-		int a = s.findPaths(2,2,2,0,0);
+		List<String> list = new ArrayList<>(Arrays.asList(new String[] {"cats", "and"}));
+	
+		List<String> a = s.wordBreak("catsanddog",list);
+		String h = "";
 	}
 	
-	public int findPaths(int m, int n, int N, int i, int j) {
-        if (N <= 0) return 0;
+	Map<Integer,List<String>> map = new HashMap<>();
+    public List<String> wordBreak(String s, List<String> wordDict) 
+    {
+        Set<String> set = new HashSet<>();
+        for(String w:wordDict)
+            set.add(w);
+        return word_Break(s,set,0);
+    }
+
+    public List<String> word_Break(String s,Set<String> wordDict,int start)
+    {
+        if(map.containsKey(start))
+            return map.get(start);
         
-        final int MOD = 1000000007;
-        int[][] count = new int[m][n];
-        count[i][j] = 1;
-        int result = 0;
+        LinkedList<String> res = new LinkedList<>();
+        if(start==s.length())
+            res.add("");
         
-        int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-        
-        for (int step = 0; step < N; step++) {
-            int[][] temp = new int[m][n];
-            for (int r = 0; r < m; r++) {
-                for (int c = 0; c < n; c++) {
-                    for (int[] d : dirs) {
-                        int nr = r + d[0];
-                        int nc = c + d[1];
-                        if (nr < 0 || nr >= m || nc < 0 || nc >= n) {
-                            result = (result + count[r][c]) % MOD;
-                        }
-                        else {
-                            temp[nr][nc] = (temp[nr][nc] + count[r][c]) % MOD;
-                        }
-                    }
-                }
+        for(int end=start+1;end<=s.length();end++)
+        {
+            if(wordDict.contains(s.substring(start,end)))
+            {
+                List<String> list= word_Break(s,wordDict,end);
+                for(String l:list)
+                    res.add(s.substring(start,end)+(l.equals("")?"":" ")+l);
             }
-            count = temp;
         }
-        
-        return result;
+        map.put(start,res);
+        return res;
     }
 	
 }
