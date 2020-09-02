@@ -1,6 +1,6 @@
 package Easy;
 import java.util.*;
-
+//1271
 public class Hexspeak {
 
 	Integer[] keys = {0, 1, 10, 11, 12, 13, 14, 15};

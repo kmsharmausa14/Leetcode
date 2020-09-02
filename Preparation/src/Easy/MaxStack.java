@@ -1,5 +1,5 @@
 package Easy;
-
+//716
 import java.util.*;
 
 public class MaxStack {
