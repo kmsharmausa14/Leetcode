@@ -1,5 +1,5 @@
 package Easy;
-
+//256
 public class PaintHouse {
 
 	public static void main(String[] args) {

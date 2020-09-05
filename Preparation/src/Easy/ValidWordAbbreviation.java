@@ -1,5 +1,5 @@
 package Easy;
-
+//408
 public class ValidWordAbbreviation {
 	public boolean validWordAbbreviation(String word, String abbr) {
         if (word.isEmpty()) {

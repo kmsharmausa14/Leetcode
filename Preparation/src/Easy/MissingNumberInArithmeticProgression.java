@@ -1,5 +1,5 @@
 package Easy;
-
+//1228
 public class MissingNumberInArithmeticProgression {
 
 	public static void main(String[] args) {

@@ -1,5 +1,5 @@
 package Easy;
-
+//346
 import java.util.*;
 
 public class Movingaveragefromdatastream {

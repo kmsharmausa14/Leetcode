@@ -1,5 +1,5 @@
 package Easy;
-
+//243
 public class ShortestWordDistance {
 
 	public static void main(String[] args) {

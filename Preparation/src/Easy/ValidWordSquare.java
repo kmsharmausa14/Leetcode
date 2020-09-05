@@ -1,5 +1,5 @@
 package Easy;
-
+//422
 import java.util.*;
 
 public class ValidWordSquare {
