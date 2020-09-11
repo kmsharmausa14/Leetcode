@@ -15,7 +15,7 @@ public class PlusOneLinkedList {
 		{
 			if(p.val+1<=9)
 			{
-				p.val=plval+1;
+				p.val=p.val+1;
 				break;
 			}
 			else

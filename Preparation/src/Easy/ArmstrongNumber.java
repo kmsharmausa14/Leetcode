@@ -1,5 +1,5 @@
 package Easy;
-
+//1134
 public class ArmstrongNumber {
 
 	public static void main(String[] args) {

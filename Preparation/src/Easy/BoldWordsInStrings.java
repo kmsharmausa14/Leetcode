@@ -1,5 +1,5 @@
 package Easy;
-
+//758
 public class BoldWordsInStrings {
 
 	public static void main(String[] args) {

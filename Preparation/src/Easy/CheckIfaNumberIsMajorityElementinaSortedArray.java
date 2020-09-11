@@ -1,5 +1,5 @@
 package Easy;
-
+//1150
 public class CheckIfaNumberIsMajorityElementinaSortedArray {
 	static boolean isMajority(int arr[], int n, int x) 
     { 

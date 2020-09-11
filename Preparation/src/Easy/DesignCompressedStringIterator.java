@@ -1,5 +1,5 @@
 package Easy;
-
+//604
 public class DesignCompressedStringIterator {
 
 	public static void main(String[] args) {
