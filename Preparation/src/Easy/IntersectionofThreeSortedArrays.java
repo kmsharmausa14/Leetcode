@@ -1,5 +1,5 @@
 package Easy;
-
+//1213
 public class IntersectionofThreeSortedArrays {
 
 	void findCommon(int ar1[], int ar2[], int ar3[]) 

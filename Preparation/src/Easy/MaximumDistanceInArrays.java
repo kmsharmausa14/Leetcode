@@ -1,5 +1,5 @@
 package Easy;
-
+//624
 public class MaximumDistanceInArrays {
 
 	public static void main(String[] args) {

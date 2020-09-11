@@ -1,4 +1,5 @@
 package Easy;
+//1196
 import java.io.*;
 import java.util.*;
 public class HowManyApplesCanYouPutintotheBasket {

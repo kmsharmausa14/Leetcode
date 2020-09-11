@@ -7,6 +7,7 @@ public class Solution {
 		Solution h = new Solution();
 		char[] ch = new char[] { 'G', 'B', 'G', 'G', 'R', 'B', 'R', 'G'};
 		int[] ar = new int[] {1,2,2,3,1};
+		String[] str = new String[] {"bella","label","roller"};
 		/*
 		ListNode ans = new ListNode(2);
 		ans.next = new ListNode(4);
@@ -28,42 +29,38 @@ public class Solution {
 		//root.right.left = new TreeNode(15);
 		//root.right.right = new TreeNode(7);
 		
-		String inth =h.convert("PAYPALISHIRING",3);
+		List<String> inth =h.commonChars(str);
 		int b=0;
 	}
     
-	public String convert(String s, int numRows) {
-        List<StringBuilder> list = new ArrayList<>();
-        for(int l=0;l<numRows;l++)
+	public List<String> commonChars(String[] A) {
+        int[] count = new int[26];
+        Arrays.fill(count,Integer.MAX_VALUE);
+        List<String> list = new ArrayList<>();
+        for(String str:A)
         {
-            list.add(new StringBuilder());
-        }
-        int n = s.length();
-        int i=0;
-        int k=0;
-        boolean br=false;
-        while(i<n && k<n)
-        {
-            if(i==0||i==numRows)
-                br=!br;
-            if(br)
+            char[] ch = str.toCharArray();
+            int[] temp= new int[26];            
+            for(char c:ch)
             {
-                //list.get(i) = new StringBuilder();
-                list.get(i).append(s.charAt(k++));
-                i++;
+                temp[c-'a']++;
             }
-            else
+            for(int y=0;y<26;y++)
             {
-                i--;
-                list.get(i).append(s.charAt(k++));                
-            }            
+                count[y]=Math.min(temp[y],count[y]);
+            }
         }
-        StringBuilder res = new StringBuilder();
-        for(int l=0;l<numRows;l++)
+        
+        for(int i=0;i<26;i++)
         {
-            res.append(list.get(l));
+            if(count[i]!=Integer.MAX_VALUE)
+                while(count[i]>0)
+                {
+                    list.add(""+(char)('a'+i));
+                    count[i]--;
+                }
         }
-        return res.toString();
+        return list;
     }
 }
 

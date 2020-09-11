@@ -1,5 +1,5 @@
 package Easy;
-
+//1086
 import java.util.*;
 
 class Record {

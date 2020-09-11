@@ -1,5 +1,5 @@
 package Easy;
-
+//1085
 public class SumofDigitsintheMinimumNumber {
 
 	public static void main(String[] args) {
