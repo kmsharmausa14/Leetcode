@@ -1,5 +1,5 @@
 package Medium573Onwards;
-
+//625
 public class MinimumFactorization {
 
 	public static void main(String[] args) {
