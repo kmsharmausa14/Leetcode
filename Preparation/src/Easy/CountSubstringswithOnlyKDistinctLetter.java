@@ -1,5 +1,5 @@
 package Easy;
-
+//1180
 import java.util.*;
 
 public class CountSubstringswithOnlyKDistinctLetter {

@@ -1,5 +1,5 @@
 package Easy;
-
+//1064
 public class FixedPoint {
 
 	public static void main(String[] args) {

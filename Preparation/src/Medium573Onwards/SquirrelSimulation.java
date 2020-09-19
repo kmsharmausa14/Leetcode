@@ -1,5 +1,5 @@
 package Medium573Onwards;
-
+//573
 public class SquirrelSimulation {
 
 	public static void main(String[] args) {

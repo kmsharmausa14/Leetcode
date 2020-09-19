@@ -1,7 +1,7 @@
 package Easy;
 
 import java.util.*;
-
+//1056
 public class ConfusingNumber {
 
 	public boolean confusingNumber(int N) {

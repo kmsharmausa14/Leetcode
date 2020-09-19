@@ -1,5 +1,5 @@
 package Medium573Onwards;
-
+//1198
 public class Findsmallestcommonelementinallrows {
 
 	int findAtLeast(int a, int[] data) {
