@@ -1,24 +1,17 @@
 package Medium1000Onwards;
 
+import java.util.*;
+
 public class RemoveInterval {
 
-	/*
-	 class Solution {
-public:
-    vector<vector<int>> removeInterval(vector<vector<int>>& intervals, vector<int>& toBeRemoved) {
-        vector<vector<int>> ans;
-        int mx = toBeRemoved[0], my = toBeRemoved[1];
-        for (const auto &i : intervals) {
-            int x = i[0], y = i[1];
-            if (y <= mx || x >= my) ans.push_back(i);
-            else {
-                if (x < mx) ans.push_back({x, mx});
-                if (y > my) ans.push_back({my, y});
-            }
-        }
-        return ans;
-    }
-};
-
-	 */
+	public List<List<Integer>> removeInterval(int[][] intervals, int[] toBeRemoved) {
+	    List<List<Integer>> l = new ArrayList<>();        
+	    for (int[] interval: intervals) {
+	        if (interval[1] >= toBeRemoved[0] && interval[0] <= toBeRemoved[1]) {
+	            if (interval[0] < toBeRemoved[0]) l.add(new ArrayList<>(Arrays.asList(interval[0], toBeRemoved[0])));
+	            if (interval[1] > toBeRemoved[1]) l.add(new ArrayList<>(Arrays.asList(toBeRemoved[1], interval[1])));
+	        } else l.add(new ArrayList<>(Arrays.asList(interval[0], interval[1])));
+	    }
+	    return l;        
+	}
 }

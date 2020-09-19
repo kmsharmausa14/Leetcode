@@ -2,7 +2,16 @@ package Medium1000Onwards;
 
 import java.util.*;
 
+import Nonleetcode.Solution;
+
 public class BraceExpansion {
+	
+	public static void main(String[] args) {	
+		BraceExpansion h = new BraceExpansion();
+		String[] inth =h.expand("{a,b}c{d,e}f");
+		int b=0;
+	}
+	
 	public String[] expand(String S) {
         if(S == null || S.length() == 0){
             return new String[0];
