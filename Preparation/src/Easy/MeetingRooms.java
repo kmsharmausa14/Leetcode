@@ -8,7 +8,7 @@ public class MeetingRooms {
 	public static void main(String[] args) {
 		
 	}
-	/*
+	
 	public boolean canAttendMeetings(Interval[] intervals)
 	{
 		Arrays.sort(intervals,new Comparator<Interval>() {
@@ -24,5 +24,5 @@ public class MeetingRooms {
 		}
 		return true;
 	}
-	*/
+	
 }
