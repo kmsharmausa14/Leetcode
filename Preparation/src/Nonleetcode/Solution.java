@@ -29,38 +29,33 @@ public class Solution {
 		//root.right.left = new TreeNode(15);
 		//root.right.right = new TreeNode(7);
 		
-		List<String> inth =h.commonChars(str);
+		h.findSubsequences(new int[] {4,6,7,7});
 		int b=0;
 	}
     
-	public List<String> commonChars(String[] A) {
-        int[] count = new int[26];
-        Arrays.fill(count,Integer.MAX_VALUE);
-        List<String> list = new ArrayList<>();
-        for(String str:A)
+	public List<List<Integer>> findSubsequences(int[] nums) {
+        List<List<Integer>> res= new LinkedList();
+        helper(new LinkedList<Integer>(),0,nums,res);
+        return res;
+    }
+    
+    public void helper(LinkedList<Integer> list,int index,int[] nums,List<List<Integer>> res)
+    {
+        if(list.size()>1)
+            res.add(new LinkedList<Integer>(list));
+        Set<Integer> used = new HashSet<>();
+        for(int i=index;i<nums.length;i++)
         {
-            char[] ch = str.toCharArray();
-            int[] temp= new int[26];            
-            for(char c:ch)
+            if(used.contains(nums[i]))
+                continue;
+            if(list.size()==0 || nums[i]>=list.peekLast())
             {
-                temp[c-'a']++;
-            }
-            for(int y=0;y<26;y++)
-            {
-                count[y]=Math.min(temp[y],count[y]);
+                used.add(nums[i]);
+                list.add(nums[i]);
+                helper(list,i+1,nums,res);
+                list.remove(list.size()-1);
             }
         }
-        
-        for(int i=0;i<26;i++)
-        {
-            if(count[i]!=Integer.MAX_VALUE)
-                while(count[i]>0)
-                {
-                    list.add(""+(char)('a'+i));
-                    count[i]--;
-                }
-        }
-        return list;
     }
 }
 
