@@ -7,7 +7,7 @@ public class NestedListWeightSum {
 	public static void main(String[] args) {
 		
 	}
-	/*
+	
 	public int depthSum(List<NestedInteger> nestedList)
 	{
 		return depthSum(nestedList, 1);
@@ -25,5 +25,5 @@ public class NestedListWeightSum {
 		}
 		return sum;
 	}
-	*/
+	
 }
