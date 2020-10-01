@@ -1,5 +1,5 @@
 package Medium325Onwards;
-
+//364
 import java.util.*;
 
 public class NestedListWeightSum2 {
@@ -16,7 +16,7 @@ public class NestedListWeightSum2 {
 		return sum(nestedList,max);
 	}
 	
-	public int maxDepth(List<NestedInteger> nestedList,int depth)
+	public String maxDepth(List<NestedInteger> nestedList,int depth)
 	{
 		int max=depth;
 		for(NestedInteger ni:nestedList)

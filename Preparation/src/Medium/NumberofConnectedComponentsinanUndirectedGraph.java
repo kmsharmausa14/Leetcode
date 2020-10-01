@@ -1,11 +1,10 @@
 package Medium;
-
+//323
 public class NumberofConnectedComponentsinanUndirectedGraph {
-	public int countComponents(int n, int[][] edges)
+	public void countComponents(int n, int[][] edges)
 	{
 		UnionFind uf = new UnionFind(n);
-		int count = n;
-		
+		//uf.circleCount = n;		
 	}
 }
 

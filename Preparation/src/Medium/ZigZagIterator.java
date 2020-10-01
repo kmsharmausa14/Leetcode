@@ -1,5 +1,5 @@
 package Medium;import java.util.*;
-
+//281
 public class ZigZagIterator {
 
 	public static void main(String[] args) {

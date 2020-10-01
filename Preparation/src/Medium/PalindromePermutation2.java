@@ -1,10 +1,10 @@
 package Medium;import java.util.*;
-
+//267
 public class PalindromePermutation2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		PalindromePermutation2 g = new PalindromePermutation2();
+		g.generatePalindrome("aabb");
 	}
 
 	Set<String> set = new HashSet<>();

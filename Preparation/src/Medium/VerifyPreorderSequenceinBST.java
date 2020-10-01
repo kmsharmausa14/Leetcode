@@ -1,6 +1,6 @@
 package Medium;
 public class VerifyPreorderSequenceinBST {
-
+//255
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] y = new int[] {5,2,1,3,6};
@@ -20,5 +20,4 @@ public class VerifyPreorderSequenceinBST {
 		}
 		return true;
 	}
-
 }

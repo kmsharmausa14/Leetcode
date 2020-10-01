@@ -1,5 +1,5 @@
 package Medium;import java.util.List;
-
+//251
 public class Flatten2DVector {
 
 	public static void main(String[] args) {

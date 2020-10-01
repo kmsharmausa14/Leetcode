@@ -1,5 +1,5 @@
 package Medium;
-
+//294
 public class FlipGame2 {
 
 	public static void main(String[] args) {

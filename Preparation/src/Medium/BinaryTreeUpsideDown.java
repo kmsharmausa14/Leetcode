@@ -1,5 +1,5 @@
 package Medium;
-
+//156
 public class BinaryTreeUpsideDown {
 
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class BinaryTreeUpsideDown {
 
 	}
 
-	/*
+	
 	public TreeNode upsideDownBinaryTree(TreeNode root)
 	{
 		if(root==null || root.left==null)
@@ -21,5 +21,5 @@ public class BinaryTreeUpsideDown {
 		root.right=null;
 		return left;
 	}
-	*/
+	
 }

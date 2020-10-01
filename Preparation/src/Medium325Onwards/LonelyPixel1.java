@@ -1,5 +1,5 @@
 package Medium325Onwards;
-
+//531
 public class LonelyPixel1 {
 
 	public static void main(String[] args) {

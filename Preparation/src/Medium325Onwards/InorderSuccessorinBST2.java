@@ -1,5 +1,6 @@
 package Medium325Onwards;
 //import Medium325Onwards.Node;
+//510
 public class InorderSuccessorinBST2 {
 
 	public static void main(String[] args) {

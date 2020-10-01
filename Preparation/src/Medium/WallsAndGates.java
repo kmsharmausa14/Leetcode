@@ -1,11 +1,6 @@
 package Medium;import java.util.*;
-
+//286
 public class WallsAndGates {
-
-	public static void main(String[] args) {
-		
-	}
-
 	public static final int EMPTY = Integer.MAX_VALUE;
 	int GATE = 0;
 	List<int[]> DIRECTIONS = Arrays.asList(

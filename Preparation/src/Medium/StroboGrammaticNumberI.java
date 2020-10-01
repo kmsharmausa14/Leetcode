@@ -1,5 +1,5 @@
 package Medium;import java.util.*;
-
+//246
 public class StroboGrammaticNumberI {
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package Medium;
 public class ShortestWordDistanceIII {
-
+//245
 	public static void main(String[] args) {
 		
 

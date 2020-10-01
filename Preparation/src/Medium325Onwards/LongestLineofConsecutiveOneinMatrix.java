@@ -1,5 +1,5 @@
 package Medium325Onwards;
-
+//562
 public class LongestLineofConsecutiveOneinMatrix {
 
 	public static void main(String[] args) {

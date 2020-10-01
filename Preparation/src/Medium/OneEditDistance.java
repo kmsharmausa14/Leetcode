@@ -1,6 +1,6 @@
 package Medium;
 public class OneEditDistance {
-
+//161
 	public static void main(String[] args) {
 		boolean r = isOneEditDistance("dmame","mame");
 	}

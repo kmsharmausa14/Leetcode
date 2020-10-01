@@ -1,6 +1,6 @@
 package Medium;
 import java.util.*;
-
+//254
 public class FactorCombinations {
 
 	public static void main(String[] args) {

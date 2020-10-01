@@ -1,5 +1,5 @@
 package Medium;
-
+//320
 import java.util.*;
 
 public class GeneralizedAbbreviation {
