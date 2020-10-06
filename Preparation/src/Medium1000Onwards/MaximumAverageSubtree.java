@@ -1,5 +1,5 @@
 package Medium1000Onwards;
-
+//1120
 public class MaximumAverageSubtree {
 
 	double max = 0;

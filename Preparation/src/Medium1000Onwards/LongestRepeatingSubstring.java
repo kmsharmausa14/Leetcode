@@ -1,5 +1,5 @@
 package Medium1000Onwards;
-
+//1062
 public class LongestRepeatingSubstring {
 	public int longestRepeatingSubstring(String S) {
         if(S == null || S.length() == 0){
