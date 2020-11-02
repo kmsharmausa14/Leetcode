@@ -1,5 +1,5 @@
 package Medium1000Onwards;
-
+//750
 public class NumberOfCornerRectangles {
 	public int countCornerRectangles(int[][] grid) {
         int m = grid.length, n = grid[0].length;

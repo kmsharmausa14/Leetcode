@@ -1,5 +1,5 @@
 package Medium1000Onwards;
-
+//1055
 public class ShortestWaytoFormString {
 	public int shortestWay(String source, String target) {
         if(source == null || target == null){
